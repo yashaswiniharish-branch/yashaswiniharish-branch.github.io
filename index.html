@@ -42,6 +42,25 @@
 			    'disable_exit_animation':true
 			});
 		}	
+		
+		function doesJourneyExistOnPage() {
+        var branchBannerIframe = document.getElementById("branch-banner-iframe");
+        if (branchBannerIframe) {
+            console.log(branchBannerIframe.src);
+            return true;
+        }
+        return false;
+    }
+		
+	function closeBranchJourney(){        
+        if(doesJourneyExistOnPage()){
+            //this is the call that closes the journey, with flags that disable the banner animations
+            console.log("closeBranchJourney called");
+            branch.closeJourney(function(err) {});
+        } else {
+            console.log("No Banner on the page");
+        }
+    }	
 	</script>
 </head>
 <body>
