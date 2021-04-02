@@ -29,9 +29,7 @@
 		margin: 5px 0px 5px 0px;
 		}
 	</style>
-	<script>
-	
-			 
+	<script>	 
 		function launchPill(){
 			console.log("launchPill called");
 
@@ -41,9 +39,6 @@
 			//launch journey with flags to disable banner animations
 			branch.track('pageview',{
 			    'JourneyType':'Pill'
-			},{
-			    'disable_entry_animation':true,
-			    'disable_exit_animation':true
 			});
 		}	
 		
